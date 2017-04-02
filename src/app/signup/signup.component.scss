@@ -1,0 +1,29 @@
+@import '../../_variables.scss';
+
+.signup {
+    background: linear-gradient(#17AC9E, #08786D);
+    overflow: hidden;
+    &__close {
+        cursor: pointer;
+        color: $arria-light-color;
+        margin-right: 10px;
+    }
+    &__heading {
+        color: $arria-light-color;
+        margin-top: 0;
+    }
+    &__notification {
+        color: $arria-light-color;
+    }
+    &__notification-link {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    & &__button {
+        background-color: $arria-light-color;
+        border-radius: 20px;
+        width: 100%;
+        height: 50%;
+        color: $arria-secondary-color;
+    }
+}

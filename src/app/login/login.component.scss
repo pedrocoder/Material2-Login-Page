@@ -1,0 +1,15 @@
+@import '../../_variables.scss';
+
+.login {
+    &__button {
+        border-radius: 20px;
+        width: 100%;
+        margin-top: 5px;
+        margin-bottom: 20px;
+        height: 50%;
+        color: $arria-light-color;
+    }
+    &__footer {
+        transition: max-height 0.8s;
+    }
+}

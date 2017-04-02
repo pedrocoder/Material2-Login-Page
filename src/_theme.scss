@@ -1,0 +1,90 @@
+@import '~@angular/material/core/theming/all-theme';
+@include mat-core();
+
+$white: #ffffff;
+
+$mat-arria-primary-theme: (
+  50: #e3f5f3,
+  100: #b9e6e2,
+  200: #8bd6cf,
+  300: #5dc5bb,
+  400: #3ab8ad,
+  500: #17ac9e,
+  600: #14a596,
+  700: #119b8c,
+  800: #0d9282,
+  900: #078270,
+  A100: #b1fff2,
+  A200: #7effe9,
+  A400: #4bffe1,
+  A700: #31ffdd,
+  contrast: map-get($mat-green, contrast)
+);
+
+$mat-arria-accent-theme: (
+  50: #f7f7f7,
+  100: #ebebeb,
+  200: #dedede,
+  300: #d0d0d1,
+  400: #c6c6c7,
+  500: #bcbcbd,
+  600: #b6b6b7,
+  700: #adadae,
+  800: #a5a5a6,
+  900: #979798,
+  A100: $white,
+  A200: $white,
+  A400: #d3d3ff,
+  A700: #b9b9ff,
+  contrast: map-get($mat-grey, contrast)
+);
+
+$arria-app-primary: mat-palette($mat-arria-primary-theme);
+$arria-app-accent:  mat-palette($mat-arria-accent-theme);
+
+$arria-app-theme: mat-light-theme($arria-app-primary, $arria-app-accent);
+
+@include angular-material-theme($arria-app-theme);
+
+$mat-arria-light-primary-theme: (
+  50: $white,
+  100: $white,
+  200: $white,
+  300: $white,
+  400: $white,
+  500: $white,
+  600: $white,
+  700: $white,
+  800: $white,
+  900: $white,
+  A100: $white,
+  A200: $white,
+  A400: $white,
+  A700: $white,
+  contrast: map-get($mat-grey, contrast)
+);
+$arria-app-light: mat-palette($mat-arria-light-primary-theme);
+$arria-light-theme: mat-light-theme($arria-app-light, $arria-app-accent);
+
+.arria-light-theme {
+  @include angular-material-theme($arria-light-theme);
+
+  & .mat-input-placeholder:not(.mat-focused),
+  & .mat-input-element {
+    color: $white;
+  }
+  & .mat-input-placeholder.mat-empty:not(.mat-focused) {
+    opacity: 0.5;
+  }
+  & .mat-input-underline .mat-input-ripple:not(.mat-focused) {
+    background-color: $white;
+    opacity: 0.5;
+    transform: scaleY(0.5);
+  }
+
+  & .mat-fab, 
+  & .mat-mini-fab {
+    background-color: $white;
+  }
+  
+}

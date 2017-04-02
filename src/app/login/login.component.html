@@ -1,0 +1,28 @@
+<div fxFlexFill fxLayout="column" >
+  <main fxFlex fxLayout="column" fxLayoutAlign="center center">
+    <div>
+      <header>
+        <img src="./assets/images/login-logo.svg" alt="" />
+      </header>
+      <div *ngIf="!isLoginFormHidden" [@fadeInOut]>
+        <form [formGroup]="loginForm"  novalidate fxLayout="column">
+          <md-input-container>
+            <input mdInput formControlName="userName" placeholder="Username" type="userName">
+            <md-hint *ngIf="isSubmissionAttempted && userName.errors && userName.errors[requiredMessage.propertyName]" class="arria-hint-label--light" align="end">{{requiredMessage.message}}</md-hint>
+          </md-input-container>
+          <md-input-container>
+            <input mdInput formControlName="password" placeholder="Password" type="password">
+            <md-hint *ngIf="isSubmissionAttempted && password.errors && password.errors[requiredMessage.propertyName]" class="arria-hint-label--light" align="end">{{requiredMessage.message}}</md-hint>
+          </md-input-container>
+        </form>
+        <button class="login__button" md-fab (click)="onSubmit()">Login</button>
+        <div fxLayout="column" fxLayoutAlign="center center">
+          <a fxFlex class="arria-link">Forgot your password?</a> 
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="login__footer" fxFlex="{{footerFlexHeight}}">
+    <arria-signup (toggleForm)="toggleLoginForm()"></arria-signup>
+  </footer>
+</div>
