@@ -1,7 +1,7 @@
 @import '../../_variables.scss';
 
 .signup {
-    background: linear-gradient(#17AC9E, #08786D);
+    background: linear-gradient($arria-primary-color, $arria-primary-dark-color);
     overflow: hidden;
     &__close {
         cursor: pointer;
