@@ -1,6 +1,6 @@
 ## Description
 
-Personal project to learn about node and angular 2 animations
+Personal project to learn about node, material 2 custom themes and angular 2 animations
 
 ## Running
 
